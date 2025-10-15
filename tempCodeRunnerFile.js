@@ -1,19 +1,17 @@
-
-const count = [10,20,30,40]; //100
-
-let cnt = 0;
-
-for(let i=0; i<count.length ; ++i){
-  cnt = cnt + count[i];
+const user = {
+    name : "meghana",
+    "age" : 25
 }
 
-console.log("For loop count :" , cnt)
+const address = {
+    city : "Nellore",
+    state : "AP"
+}
 
 
-// now we count using reduce
-const count2 = [10,20,30,40];
-let countVal = count2.reduce((acc,curr)=>{
-    return acc + curr;
-},0)
+const mixedObj = {...user , ...address}
 
-console.log("Reduce count : ",countVal)
+console.log(mixedObj)
+
+console.log(mixedObj.name);
+console.log(mixedObj.state);
